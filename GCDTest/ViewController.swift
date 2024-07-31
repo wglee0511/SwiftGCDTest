@@ -81,6 +81,64 @@ class ViewController: UIViewController {
         print("Concurrent: \(timeDifference)")
     }
     
+    var currentWorkItem: DispatchWorkItem?
+    
+    @IBAction func onPressSubmit(_ sender: Any) {
+        currentWorkItem = DispatchWorkItem(block: { [weak self] in
+            
+            for index in 0 ... 100 {
+                guard let item = self?.currentWorkItem, !item.isCancelled else { return }
+                print(index, separator: " ", terminator: " ")
+                Thread.sleep(forTimeInterval: 0.1)
+            }
+        })
+        
+        guard let workItem = currentWorkItem else {
+            return
+        }
+        
+        concurrentQueue.async(execute: workItem)
+        
+        workItem.notify(queue: concurrentQueue) {
+            print("Done")
+        }
+    }
+    
+    @IBAction func onPressCancel(_ sender: Any) {
+        currentWorkItem?.cancel()
+    }
+    
+    let dispatchGroup = DispatchGroup()
+    
+    @IBAction func onPressDispatchGroup(_ sender: Any) {
+        concurrentQueue.async(group: dispatchGroup) {
+            for _ in 0 ... 10 {
+                print("🍎", separator: " ", terminator: " ")
+                
+                Thread.sleep(forTimeInterval: 0.1)
+            }
+        }
+        
+        concurrentQueue.async(group: dispatchGroup) {
+            for _ in 0 ... 10 {
+                print("🍐", separator: " ", terminator: " ")
+                
+                Thread.sleep(forTimeInterval: 0.2)
+            }
+        }
+        
+        serialQueue.async(group: dispatchGroup) {
+            for _ in 0 ... 10 {
+                print("🫐", separator: " ", terminator: " ")
+                
+                Thread.sleep(forTimeInterval: 0.3)
+            }
+        }
+        
+        dispatchGroup.notify(queue: DispatchQueue.main) {
+            print("Done")
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -18,10 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="895-Ud-zoC">
-                                <rect key="frame" x="141.66666666666666" y="317" width="110" height="218.33333333333337"/>
+                                <rect key="frame" x="116.66666666666667" y="224.99999999999997" width="159.66666666666663" height="402.33333333333326"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4U-Da-jUB">
-                                        <rect key="frame" x="0.0" y="0.0" width="110" height="34.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="159.66666666666666" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Sync"/>
                                         <connections>
@@ -29,7 +29,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRd-Ba-TTu">
-                                        <rect key="frame" x="0.0" y="61.333333333333314" width="110" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="61.333333333333314" width="159.66666666666666" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Async"/>
                                         <connections>
@@ -37,7 +37,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iku-lS-rQq">
-                                        <rect key="frame" x="0.0" y="122.66666666666667" width="110" height="34.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="122.66666666666667" width="159.66666666666666" height="34.333333333333329"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Delay"/>
                                         <connections>
@@ -45,18 +45,44 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tC8-jZ-szS">
-                                        <rect key="frame" x="0.0" y="184" width="110" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="184" width="159.66666666666666" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Concurrent"/>
                                         <connections>
                                             <action selector="onPressConcurrent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CNa-tS-KwH"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEB-1v-KFC">
+                                        <rect key="frame" x="0.0" y="245.33333333333334" width="159.66666666666666" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Submit Work Item"/>
+                                        <connections>
+                                            <action selector="onPressSubmit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k2Q-Dq-r9K"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNH-tL-5rs">
+                                        <rect key="frame" x="0.0" y="306.66666666666663" width="158.33333333333334" height="34.333333333333314"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Cancel Work Item"/>
+                                        <connections>
+                                            <action selector="onPressCancel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aAQ-Pw-U1X"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="naS-tB-rm8">
+                                        <rect key="frame" x="0.0" y="368" width="159.66666666666666" height="34.333333333333314"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Dispatch Group"/>
+                                        <connections>
+                                            <action selector="onPressDispatchGroup:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JXH-yt-3vi"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="X4U-Da-jUB" firstAttribute="trailing" secondItem="oRd-Ba-TTu" secondAttribute="trailing" id="1cg-6x-3ox"/>
+                                    <constraint firstItem="naS-tB-rm8" firstAttribute="trailing" secondItem="zEB-1v-KFC" secondAttribute="trailing" id="3U3-3T-jrW"/>
                                     <constraint firstItem="Iku-lS-rQq" firstAttribute="trailing" secondItem="tC8-jZ-szS" secondAttribute="trailing" id="F87-hi-wvZ"/>
                                     <constraint firstItem="oRd-Ba-TTu" firstAttribute="trailing" secondItem="Iku-lS-rQq" secondAttribute="trailing" id="GUm-LZ-1NR"/>
+                                    <constraint firstItem="tC8-jZ-szS" firstAttribute="trailing" secondItem="zEB-1v-KFC" secondAttribute="trailing" id="IZI-IO-zZU"/>
                                 </constraints>
                             </stackView>
                         </subviews>

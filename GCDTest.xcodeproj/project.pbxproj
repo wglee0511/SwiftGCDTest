@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E41422BB2C5A36D400D34A46 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41422BA2C5A36D400D34A46 /* Model.swift */; };
+		E41422BD2C5A37E700D34A46 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41422BC2C5A37E700D34A46 /* PhotoViewController.swift */; };
 		E42C4FD02C5A22C400188359 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42C4FCF2C5A22C400188359 /* AppDelegate.swift */; };
 		E42C4FD22C5A22C400188359 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42C4FD12C5A22C400188359 /* SceneDelegate.swift */; };
 		E42C4FD42C5A22C400188359 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42C4FD32C5A22C400188359 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E41422BA2C5A36D400D34A46 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		E41422BC2C5A37E700D34A46 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		E42C4FCC2C5A22C400188359 /* GCDTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GCDTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42C4FCF2C5A22C400188359 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E42C4FD12C5A22C400188359 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +42,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E41422B92C5A36CA00D34A46 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E41422BA2C5A36D400D34A46 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		E42C4FC32C5A22C400188359 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +70,7 @@
 		E42C4FCE2C5A22C400188359 /* GCDTest */ = {
 			isa = PBXGroup;
 			children = (
+				E41422B92C5A36CA00D34A46 /* Model */,
 				E42C4FCF2C5A22C400188359 /* AppDelegate.swift */,
 				E42C4FD12C5A22C400188359 /* SceneDelegate.swift */,
 				E42C4FD32C5A22C400188359 /* ViewController.swift */,
@@ -65,6 +78,7 @@
 				E42C4FD82C5A22C500188359 /* Assets.xcassets */,
 				E42C4FDA2C5A22C500188359 /* LaunchScreen.storyboard */,
 				E42C4FDD2C5A22C500188359 /* Info.plist */,
+				E41422BC2C5A37E700D34A46 /* PhotoViewController.swift */,
 			);
 			path = GCDTest;
 			sourceTree = "<group>";
@@ -143,6 +157,8 @@
 				E42C4FD42C5A22C400188359 /* ViewController.swift in Sources */,
 				E42C4FD02C5A22C400188359 /* AppDelegate.swift in Sources */,
 				E42C4FD22C5A22C400188359 /* SceneDelegate.swift in Sources */,
+				E41422BB2C5A36D400D34A46 /* Model.swift in Sources */,
+				E41422BD2C5A37E700D34A46 /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
